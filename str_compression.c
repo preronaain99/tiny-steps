@@ -1,37 +1,25 @@
 #include<stdio.h>
 #include<string.h>
-void main()
+
+int main()
 {
-    char str[10]={'a','a','a','a','b','b','c','d','d','\0'};
-    int i=0,sum=1;
-    char a[50];
-    int len=strlen(str);
-    while(str[i]!='\0')
-    for(i=0;i<len-1;i++)
-    {
-         if(str[i]==str[i+1]){
-           sum++;
-       
-          
-              printf("%c",str[i]);
-            
-           
-          }else{
-            
-           for(i=sum+48;i<=a[i];i++)
-            
-             printf("%c%d",str[i],a[i]);   
-              }      
-            
-     }
-
-
-            
-
-         
-}  
-             
-
-
-
-   
+        char str[10]={'a', 'a', 'a', 'a', 'b', 'b', 'c', 'd', 'd', '\0'};
+        int i = 0, sum = 1, j = 0;
+        char a[50];
+        int len = strlen(str); 
+        for( i = 0; i < len; i++ ) {
+                if( str[i] == str[i + 1] ) {
+                        sum++;
+                } else {
+                        a[j] = sum + 48;
+                        a[j + 1] = str[i];
+                        j += 2;        
+                        sum = 1;
+                }
+        }        
+        a[j] = '\0';
+        for(i = 0; str[i++] != '\0'; ){
+                printf("%c", a[i]);
+        }
+        return 0;
+}
