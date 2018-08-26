@@ -8,7 +8,7 @@ void main()
 	printf("enter the elements of the first matrix:") ;
         for( i = 0; i < rows; i++ ) {
 		for( j = 0; j < columns; j++ ) {
-		  scanf( "%d", &first[i][j] ) ;
+			scanf( "%d", &first[i][j] ) ;
 	  	}
 	}  
 	printf( "enter the elements of the second matrix:" ) ;
