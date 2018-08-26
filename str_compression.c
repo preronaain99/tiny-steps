@@ -3,23 +3,25 @@
 
 int main()
 {
-        char str[10]={'a', 'a', 'a', 'a', 'b', 'b', 'c', 'd', 'd', '\0'};
-        int i = 0, sum = 1, j = 0;
-        char a[50];
+        char str[50];
+        printf("enter the string:");
+        gets(str);
+        int i = 0, sum = 1, ch = 0;
+        char store_char[50];
         int len = strlen(str); 
         for( i = 0; i < len; i++ ) {
                 if( str[i] == str[i + 1] ) {
                         sum++;
                 } else {
-                        a[j] = sum + 48;
-                        a[j + 1] = str[i];
-                        j += 2;        
+                        store_char[ch] = sum + 48;
+                        store_char[ch + 1] = str[i];
+                        ch+= 2;        
                         sum = 1;
                 }
         }        
-        a[j] = '\0';
+        store_char[ch] = '\0';
         for(i = 0; str[i++] != '\0'; ){
-                printf("%c", a[i]);
+                printf("%c", store_char[i]);
         }
         return 0;
 }
