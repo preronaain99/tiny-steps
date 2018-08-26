@@ -6,3 +6,5 @@ int main(){
     printf("Then write hello world..haha!");
     return 0;
 }
+so ...where is the string compression program...its in gedit..wait let me show it to you
+what ..wait
