@@ -15,13 +15,11 @@ int main()
                 } else {
                         store_char[ch] = sum + 48;
                         store_char[ch + 1] = str[i];
-                        ch+= 2;        
+                        ch += 2;        
                         sum = 1;
                 }
         }        
         store_char[ch] = '\0';
-        for(i = 0; str[i] != '\0'; ){
-                printf("%c", store_char[i++]);
-        }
+        printf("%s\n", store_char);
         return 0;
 }
