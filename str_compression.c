@@ -20,8 +20,8 @@ int main()
                 }
         }        
         store_char[ch] = '\0';
-        for(i = 0; str[i++] != '\0'; ){
-                printf("%c", store_char[i]);
+        for(i = 0; str[i] != '\0'; ){
+                printf("%c", store_char[i++]);
         }
         return 0;
 }
