@@ -1,23 +1,37 @@
 #include<stdio.h>
 
-
+void primefactors(int m)
+{
+	int i;
+	for(i = 2; m > 1; i++){
+		while(m % i == 0){
+			m = m / i;
+			printf("%d ", i);
+		}
+	}
+}
 
 void main()
 {
-        int num[5] = {12,34,54,66,11};
-	int i, j = 2, k;
-	int num[k];
-	num[k] = num[5];
-	for(i = 0; i < 5; i++){
-		while(i % j == 0 ){
-			i = i / j;
-			int primefactors(int k);
-			printf("%d\n", k);
+	int i, m, arr[50];
+	scanf("%d", &m);
+	for(i = 0; i < m; i++){
+		scanf("%d", &arr[i]);
+	}
 
-		}
 
-		
-
-		
+	//bad practice sorry//dint say sorry when you dont know dynamic allocation
+	for(i = 0; i < m; i++){
+		/*call prime factor function*/
+		primefactors(arr[i]);
+		printf("\n");
 	}
 }
+	
+
+
+
+
+
+
+
