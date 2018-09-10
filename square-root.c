@@ -1,11 +1,10 @@
 #include<stdio.h>
+#include<math.h>
 
 float square_root(float m)
 {
-        int i;
         float x1, x0;
-        x0 = m;
-
+        x1 = m;
         if(m < 0)
         {
                 m = -m;
@@ -13,25 +12,16 @@ float square_root(float m)
         }
         else if(m > 0)
         {
-                i = 0;
-                do{
+                do {
+                        x0 = x1;
                         x1 = (0.5) * (x0 + ( m / x0));                  
-                        printf("%f", x1);
-                        i++;
                 }
-                while(x1 != x0);
-                
-                
-
+                while(fabsf(x0 - x1) > 0.001f);
         }
-        if(x0 == x1)
-        {
-                return x0;
-        }
-       
+        return x1;
 }
 
-void main()
+int main()
 {
 	int i;
         float m, arr[50];
@@ -39,13 +29,10 @@ void main()
 	for(i = 0; i < m; i++){
 		scanf("%f", &arr[i]);
 	}
-
-
-
 	for(i = 0; i < m; i++){
-		square_root(arr[i]);
-		printf("\n");
+		printf("%f ", square_root(arr[i]));
 	}
+        return 0;
 }
 	
 
