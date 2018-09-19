@@ -14,9 +14,9 @@ int main()
 		else if(arr[i] == 0){
 		        barren++;
 		}
-	        else if (arr[i] != 1 || arr[i] !=0){
+	        else if (arr[i] != 1 && arr[i] !=0){
 			       printf("%d", a );
-		return 0;
+		break;
 		}
 
 		
