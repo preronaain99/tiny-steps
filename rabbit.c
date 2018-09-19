@@ -14,18 +14,22 @@ int main()
 		else if(arr[i] == 0){
 		        barren++;
 		}
-		else if (arr[i] != 1 || arr[i] !=0){
-		        printf("%d", a );
+	        else if (arr[i] != 1 || arr[i] !=0){
+			       printf("%d", a );
+		return 0;
 		}
+
+		
 	}
 		
 	
-	if((carrot++) >= 8){
+	if((carrot) >= 8){
 		printf("%d", alive);
 	}
-	else if ((carrot++) < 8){
+	else if ((carrot) < 8){
 		printf("%d", dead);
 	}
+		 
 	return 0;
 }	
 	
