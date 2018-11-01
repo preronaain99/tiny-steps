@@ -3,32 +3,35 @@
 
 int main()
 {
-	int i, m, count = 0;
+	int m, count = 0, j = 0;
+        int  p;
+        char a[50];
         scanf("%d", &m);
-	for(i = 2; m > 1; i++){
-		while(m % i == 0){
-			m = m / i;
-			printf("%d ", i);
-                        count++ ;
+	for(p = 2; m > 1; p++){
+		while(m % p == 0){
+			m = m / p;
+                        p = p + 48;
+                        count++;
+                        a[count++] =  p;
 		}
 	}
-
-	
-        int j = 0, sum = 0;
-        int store_fac[count++];
-        int store_num[50];
-        for( j = 0; j < count; j++ ) {
-                if( store_fac[j] == store_fac[j + 1] ) {
+        int i;
+        int sum = 0, ch = 0;
+        char store_fac[p];
+        int len = strlen(store_fac);
+        char store_char[50];
+        for( i = 0; i < len; i++ ) {
+                if( store_fac[i] == store_fac[i + 1] ) {
                         sum++;
                 } else {
-                        store_num[j] = i + 48;
-                        store_num[j + 1] = store_fac[j];
-                        j += 2;        
+                        store_char[i] = sum + 48;
+                        store_char[i + 1] = store_fac[i];
+                        i += 2;        
                         sum = 1;
                 }
         }        
-        store_num[j] = (count) - 1;
-        printf("%d\n", store_num);
+        store_char[ch] = '\0';
+        printf("%s\n", store_char);
         return 0;
 }
 

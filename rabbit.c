@@ -15,7 +15,7 @@ int main()
 		        barren++;
 		}
 	        else if (arr[i] != 1 && arr[i] !=0){
-			       printf("%d", a );
+		      printf("%d", a );
 		break;
 		}
 
