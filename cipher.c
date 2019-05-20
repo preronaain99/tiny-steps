@@ -12,7 +12,7 @@ void encryptDecrypt(char inpString[])
 }
 void main()
 {
-        char sampleString[] = "ArghaChakraborty";
+        char sampleString[] = "AdritaAinDutta";
         printf("Encrypted string: ");
         encryptDecrypt(sampleString);
         printf("\n");
