@@ -17,18 +17,18 @@ int main()
         r = n - 1;
        
         while(l <= r && (k > 0 && k < 1)){
-                p = (l + r) * k;
+                p = (int) (l + r) * k;
                 if(a[p] < t)
                 l = p + 1;
-                else if(a[p] == t){
+                if(a[p] == t){
                         printf("%d found at location %d.\n", t, p + 1);
                         break;
                 }
                 else
                 r = p - 1;
-                p = (l + r) * k;
                 
         }
         if(l > r)
         return 0;
-}
+}             
+
